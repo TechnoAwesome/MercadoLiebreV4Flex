@@ -1,0 +1,173 @@
+.home{
+    background-color: var(--gris-claro);
+     display:  flex ;
+     flex-flow :  column wrap;
+}
+
+/* Header */
+
+.home header{
+    background-color: var(--amarillo);
+}
+.home .logo-buscar{
+    /* margin: 0 0 15px 15px; */
+}
+.home header p{
+    text-align: center;
+    font-size: 12px;
+}
+/* nav-bar */
+.home .nav-bar a{
+    color: black;
+    font-size: 12px;
+}
+.home .nav-bar ul{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.home .burger-menu{
+    margin: 0 44% 20px;
+    display: inline-block;
+    background: var(--celeste);
+    font-size: 20px;
+    padding: 8px 10px;
+    border: 1px solid var(--celeste);
+    color: white;
+    border-radius: 5px;
+}
+/* banner */
+.home .banner{
+    width: 100%;
+}
+/* main */
+.home main{
+    width: 90%;
+    margin:15px;
+    text-align: center;
+}
+.home main h2{
+    text-align: left;
+    font-size: 24px;
+    color: var(--gris-oscuro)
+}
+.home main .precio{
+    font-size: 18px;
+    width: 30%;
+}
+.home .descuentos{
+    width: 70%;
+}
+.home main .descuentos, .descripciones{
+    font-size: 16px;
+}
+.home main article{
+    text-align: left;
+    border-top: 1px solid #ebebeb;
+    margin: 10px 0;
+}
+.home main article h3{
+    color: var(--gris-oscuro);
+    line-height: 50px;
+}
+.home main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    border-radius: 50%;
+    background-color: #FFF;
+    position: absolute;
+    right: 20px;
+    top: -34px;
+}
+.home main .fa-truck{
+    margin: 20px;
+    color: green;
+}
+.home main .visitas, .ofertas{
+    margin: -2.5px 0;
+    padding: 10px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* footer */
+.home footer{
+    margin: 2%;
+    background-color: white;
+}
+.home footer section{
+    text-align: center;
+    font-size: 12px;
+    margin: 30px 20px 30px 20px;
+}
+.home .icon{
+    color: var(--celeste);
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+.home footer .copyright{
+    text-align: left;
+    margin: 30px 0 10px 10px;
+}
+@media (min-width:0px){
+    .home .logo-buscar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .home .logo-buscar .logo, .buscar{
+        width: 50%;
+    }
+    .home main .img{
+        width: 100%;
+    }
+    .home .nav-bar ul{
+        display: none;
+    }
+    .home .burger-menu{
+        margin: 20px 45%;
+    }
+    .home main .descripciones{
+        display:none;
+    }
+    .home main .descuentos{
+        color: green;
+        text-transform: lowercase;
+    }
+@media (min-width: 361px) {
+    .home main .descripciones{
+        display:block;
+    }
+    .home .nav-bar ul{
+        display: block;
+    }
+    .home main article{
+        box-shadow: 0px 0px 10px rgb(100,100,100);
+    }
+}
+@media (min-width: 769px){
+    .home main{
+        width: 96%;
+    }
+    .home main .descripciones{
+        width: 100%;
+    }
+    .home main article{
+        width: 45%;
+    }
+    .home main section{
+        display: flex;
+        flex-flow:wrap ;
+        justify-content: space-evenly;
+    }
+    .home .burger-menu{
+        margin: 20px 47.2%;
+    }
+}
+}
