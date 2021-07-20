@@ -28,3 +28,6 @@ a{
 .fa-shopping-basket:hover{
     color: white;
 }
+li{
+    list-style: none;
+}

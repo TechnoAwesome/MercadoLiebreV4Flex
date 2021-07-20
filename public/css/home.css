@@ -9,24 +9,19 @@
 .home header{
     background-color: var(--amarillo);
 }
-.home .logo-buscar{
-    /* margin: 0 0 15px 15px; */
-}
 .home header p{
     text-align: center;
     font-size: 12px;
+}
+.home .logo-buscar p{
+    display: inline;
 }
 /* nav-bar */
 .home .nav-bar a{
     color: black;
     font-size: 12px;
 }
-.home .nav-bar ul{
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
 .home .burger-menu{
-    margin: 0 44% 20px;
     display: inline-block;
     background: var(--celeste);
     font-size: 20px;
@@ -38,6 +33,7 @@
 /* banner */
 .home .banner{
     width: 100%;
+    display: block;
 }
 /* main */
 .home main{
@@ -115,14 +111,35 @@
     text-align: left;
     margin: 30px 0 10px 10px;
 }
+/* media queries */
 @media (min-width:0px){
     .home .logo-buscar{
         display: flex;
-        justify-content: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
         align-items: center;
+        padding: 15px 0;
+        height: 120px;
     }
-    .home .logo-buscar .logo, .buscar{
-        width: 50%;
+    .home .logo-buscar .buscar{
+        width: 82%;
+        display: inline;
+        padding: 5px;
+        border-radius:5px 0 0 5px;
+        border: 1px solid #FFF;
+    }
+    .home .logo-buscar .fa-search{
+        display: inline;
+    }
+    .home .logo-buscar .search{
+        padding: 5px;
+        border-radius:0 5px 5px 0;
+        border: 1px solid #FFF;
+        background-color: #FFF;
+        color: var(--gris-oscuro);
+    }
+    .home .logo-buscar a,form{
+        width: 45%;
     }
     .home main .img{
         width: 100%;
@@ -144,14 +161,28 @@
     .home main .descripciones{
         display:block;
     }
-    .home .nav-bar ul{
-        display: block;
+    .home .nav-bar nav{
+        width: 100%;
+        display: flex;
+        flex-flow: wrap row;
+    }
+    .home .nav-bar nav ul{
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .home .burger-menu{
+        display: none;
     }
     .home main article{
         box-shadow: 0px 0px 10px rgb(100,100,100);
     }
 }
 @media (min-width: 769px){
+    .home .logo-buscar a, form ,p{
+        width: 30%;
+    }
     .home main{
         width: 96%;
     }
@@ -166,8 +197,16 @@
         flex-flow:wrap ;
         justify-content: space-evenly;
     }
-    .home .burger-menu{
-        margin: 20px 47.2%;
+}
+@media (min-width: 1024px){
+    .home main article{
+        width: 23.3%;
+    }
+    .home .descuentos{
+        width: 60%;
+    }
+    .home main .precio{
+        width: 40%
     }
 }
 }
