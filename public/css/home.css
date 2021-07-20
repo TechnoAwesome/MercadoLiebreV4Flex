@@ -1,7 +1,7 @@
 .home{
     background-color: var(--gris-claro);
-     display:  flex ;
-     flex-flow :  column wrap;
+    display:  flex ;
+    flex-flow :  column wrap;
 }
 
 /* Header */
@@ -13,10 +13,41 @@
     text-align: center;
     font-size: 12px;
 }
+.home .logo-buscar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 120px;
+}
 .home .logo-buscar p{
     display: inline;
 }
+.home .logo-buscar .buscar{
+    width: 82%;
+    display: inline;
+    padding: 5px;
+    border-radius:5px 0 0 5px;
+    border: 1px solid #FFF;
+}
+.home .logo-buscar .fa-search{
+    display: inline;
+}
+.home .logo-buscar .search{
+    padding: 5px;
+    border-radius:0 5px 5px 0;
+    border: 1px solid #FFF;
+    background-color: #FFF;
+    color: var(--gris-oscuro);
+}
+.home .logo-buscar a,form{
+    width: 45%;
+}
 /* nav-bar */
+
+.home .nav-bar ul{
+    display: none;
+}
 .home .nav-bar a{
     color: black;
     font-size: 12px;
@@ -29,8 +60,10 @@
     border: 1px solid var(--celeste);
     color: white;
     border-radius: 5px;
+    margin: 20px 45%
 }
 /* banner */
+
 .home .banner{
     width: 100%;
     display: block;
@@ -39,23 +72,31 @@
 .home main{
     width: 90%;
     margin:15px;
-    text-align: center;
+}
+.home main .img{
+    width: 100%;
 }
 .home main h2{
     text-align: left;
     font-size: 24px;
     color: var(--gris-oscuro)
 }
+.home main .descuentos, .descripciones{
+    font-size: 16px;
+}
 .home main .precio{
     font-size: 18px;
     width: 30%;
 }
+.home main .descripciones{
+    display:none;
+}
 .home .descuentos{
+    color: green;
+    text-transform: lowercase;
     width: 70%;
 }
-.home main .descuentos, .descripciones{
-    font-size: 16px;
-}
+
 .home main article{
     text-align: left;
     border-top: 1px solid #ebebeb;
@@ -94,95 +135,71 @@
 
 /* footer */
 .home footer{
-    margin: 2%;
+    width: 90%;
+    margin: 15px;
     background-color: white;
 }
 .home footer section{
-    text-align: center;
+    width: 100%;
     font-size: 12px;
-    margin: 30px 20px 30px 20px;
+    text-align: center;
+}
+.home footer section p{
+    width: 100%;
+    margin: 2% 0;
 }
 .home .icon{
+    margin: 0 45%;
     color: var(--celeste);
     font-size: 2em;
     margin-bottom: 10px;
 }
 .home footer .copyright{
     text-align: left;
-    margin: 30px 0 10px 10px;
+    margin: 0 1%;
+    padding: 1% 0;
 }
+
 /* media queries */
-@media (min-width:0px){
-    .home .logo-buscar{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 15px 0;
-        height: 120px;
-    }
-    .home .logo-buscar .buscar{
-        width: 82%;
-        display: inline;
-        padding: 5px;
-        border-radius:5px 0 0 5px;
-        border: 1px solid #FFF;
-    }
-    .home .logo-buscar .fa-search{
-        display: inline;
-    }
-    .home .logo-buscar .search{
-        padding: 5px;
-        border-radius:0 5px 5px 0;
-        border: 1px solid #FFF;
-        background-color: #FFF;
-        color: var(--gris-oscuro);
-    }
-    .home .logo-buscar a,form{
-        width: 45%;
-    }
-    .home main .img{
-        width: 100%;
-    }
-    .home .nav-bar ul{
-        display: none;
-    }
-    .home .burger-menu{
-        margin: 20px 45%;
-    }
-    .home main .descripciones{
-        display:none;
-    }
-    .home main .descuentos{
-        color: green;
-        text-transform: lowercase;
-    }
+
 @media (min-width: 361px) {
-    .home main .descripciones{
-        display:block;
-    }
+    /* nav */
     .home .nav-bar nav{
         width: 100%;
         display: flex;
         flex-flow: wrap row;
     }
     .home .nav-bar nav ul{
+        height: 100px;
+        flex-direction: column;
         width: 50%;
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-evenly;
+        align-items: center;
     }
     .home .burger-menu{
         display: none;
     }
+    /* main */
+    .home main .descripciones{
+        display:block;
+    }
+    
     .home main article{
         box-shadow: 0px 0px 10px rgb(100,100,100);
     }
 }
-@media (min-width: 769px){
+@media (min-width: 768px){
+    /* header */
     .home .logo-buscar a, form ,p{
         width: 30%;
     }
+    /* nav */
+    .home .nav-bar nav ul{
+        height: 70px;
+        flex-direction: row;
+    }
+    /* main */
     .home main{
         width: 96%;
     }
@@ -197,8 +214,17 @@
         flex-flow:wrap ;
         justify-content: space-evenly;
     }
+    /* footer */
+    .home footer{
+        width: 96%;
+    }
 }
 @media (min-width: 1024px){
+    /* header */
+    .home .logo{
+        height: 70px;
+    }
+    /* main */
     .home main article{
         width: 23.3%;
     }
@@ -208,5 +234,8 @@
     .home main .precio{
         width: 40%
     }
-}
+    /* footer */
+    .home footer{
+        width: 95%;
+    }
 }
